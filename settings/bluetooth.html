@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>仿Android Setting</title>
+    <link rel="stylesheet" href="../css/mdui.css">
+    <script src="../js/mdui.js"></script>
+    <style>
+        .mdui-textfield-label {
+            margin-left: 10px;
+        }
+
+        .mdui-appbar {
+            height: 64px;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+        }
+
+        .mdui-drawer,
+        #WLAN {
+            margin-top: 65px;
+        }
+
+        .mdui-switch {
+            position: absolute;
+            top: 78px;
+            right: 30px;
+        }
+    </style>
+
+<body class="mdui-drawer-body-left" onload="new mdui.Drawer('#drawer').close();">
+
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-teal">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" onclick="new mdui.Drawer('#drawer').toggle();"><i
+                    class="mdui-icon material-icons">menu</i></a>
+            <a href="javascript:;" class="mdui-typo-headline">蓝牙</a>
+        </div>
+    </div>
+
+    <ul class="mdui-list" id="WLAN">
+        <li class="mdui-list-item">
+            <div class="mdui-list-item-content" style="float: left;">关闭</div>
+            <div class="mdui-list-item-content" style="float: right;">
+                <label class="mdui-switch">
+                    <input type="checkbox" disabled />
+                    <i class="mdui-switch-icon"></i>
+                </label>
+            </div>
+        </li>
+    </ul>
+
+    <div class="mdui-typo">
+        <p style="font-size: x-large;position: absolute;top: 300px;left: 420px;">开启蓝牙后，您的设备可以与其他蓝牙设备通信。</p>
+    </div>
+
+    <div class="mdui-drawer" id="drawer">
+        <ul class="mdui-list">
+            <a href="../index.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">home</i>
+                    <div class="mdui-list-item-content">设置主屏幕</div>
+                </li>
+            </a>
+            <li class="mdui-subheader">无线和网络</li>
+            <a href="./WLAN.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">network_wifi</i>
+                    <div class="mdui-list-item-content">WLAN</div>
+                </li>
+            </a>
+            <a href="./bluetooth.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">bluetooth</i>
+                    <div class="mdui-list-item-content">蓝牙</div>
+                </li>
+            </a>
+            <a href="./more.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">more_horiz</i>
+                    <div class="mdui-list-item-content">更多</div>
+                </li>
+            </a>
+            <li class="mdui-subheader">设备</li>
+            <a href="./display.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">brightness_6</i>
+                    <div class="mdui-list-item-content">显示</div>
+                </li>
+            </a>
+            <a href="./notifi.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">notifications</i>
+                    <div class="mdui-list-item-content">通知</div>
+                </li>
+            </a>
+            <a href="./sound.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">volume_up</i>
+                    <div class="mdui-list-item-content">声音</div>
+                </li>
+            </a>
+            <a href="./apps.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">adb</i>
+                    <div class="mdui-list-item-content">应用</div>
+                </li>
+            </a>
+            <a href="./storage.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">storage</i>
+                    <div class="mdui-list-item-content">存储</div>
+                </li>
+            </a>
+            <a href="./battery.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">battery_std</i>
+                    <div class="mdui-list-item-content">电池</div>
+                </li>
+            </a>
+            <a href="./memory.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">memory</i>
+                    <div class="mdui-list-item-content">内存</div>
+                </li>
+            </a>
+            <li class="mdui-subheader">个人</li>
+            <a href="./location.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">location_on</i>
+                    <div class="mdui-list-item-content">位置信息</div>
+                </li>
+            </a>
+            <a href="./security.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">lock</i>
+                    <div class="mdui-list-item-content">安全</div>
+                </li>
+            </a>
+            <a href="./accounts.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">account_box</i>
+                    <div class="mdui-list-item-content">账号</div>
+                </li>
+            </a>
+            <a href="./language.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">language</i>
+                    <div class="mdui-list-item-content">语言和输入法</div>
+                </li>
+            </a>
+            <a href="./backup.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">backup</i>
+                    <div class="mdui-list-item-content">备份和重置</div>
+                </li>
+            </a>
+            <li class="mdui-subheader">系统</li>
+            <a href="./date.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">access_time</i>
+                    <div class="mdui-list-item-content">日期和时间</div>
+                </li>
+            </a>
+            <a href="./access.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">accessibility</i>
+                    <div class="mdui-list-item-content">无障碍</div>
+                </li>
+            </a>
+            <a href="./print.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">print</i>
+                    <div class="mdui-list-item-content">打印</div>
+                </li>
+            </a>
+            <a href="./developer.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">code</i>
+                    <div class="mdui-list-item-content">开发者选项</div>
+                </li>
+            </a>
+            <a href="./about.html">
+                <li class="mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-teal">info_outline</i>
+                    <div class="mdui-list-item-content">关于平板电脑</div>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+</body>
+
+</html>
